@@ -26,7 +26,7 @@ class upload_to_gcp_storage:
             "optional": {
                 # If images are provided, they'll be processed and saved as PNG.
                 "images": ("IMAGE", ),
-                "local_file_path": ("STRING", {"default": "", "multiline": False}),
+                "local_file_path": ("VHS_FILENAMES", {"default": "", "multiline": False})
                 # If a file is already produced by the workflow (e.g. an .mp4), provide its full local path.
             
             },
