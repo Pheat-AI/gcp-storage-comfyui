@@ -92,9 +92,9 @@ def save_images(self, images, filename_prefix="ComfyUI"):
     return results
 
 NODE_CLASS_MAPPINGS = {
-    "GCPStorageNode": upload_to_gcp_storage,
+    "StorageGCP": upload_to_gcp_storage,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "GCPStorageNode": "GCP Storage Upload",
+    "StorageGCP": "GCP Storage Upload",
 }
