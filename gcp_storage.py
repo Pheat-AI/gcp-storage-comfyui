@@ -22,12 +22,13 @@ class upload_to_gcp_storage:
                 "bucket_name": ("STRING", {"default": "bucket", "multiline": False}),
                 "bucket_folder_prefix": ("STRING", {"multiline": False}),
                 "gcp_service_json": ("STRING", {"default": "path", "multiline": False}),
+                "local_file_path": ("STRING", {"default": "", "multiline": False}),
             },
             "optional": {
                 # If images are provided, they'll be processed and saved as PNG.
                 "images": ("IMAGE", ),
                 # If a file is already produced by the workflow (e.g. an .mp4), provide its full local path.
-                "local_file_path": ("STRING", {"default": "", "multiline": False})
+            
             },
         }
 
@@ -96,5 +97,5 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "StorageGCP": "GCP Storage Upload",
+    "StorageGCP": "Storage GCP",
 }
